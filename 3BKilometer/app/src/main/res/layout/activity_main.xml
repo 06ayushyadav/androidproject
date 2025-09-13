@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <!-- Input field -->
+    <EditText
+        android:id="@+id/kmInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter kilometers"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/covertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        app:layout_constraintTop_toBottomOf="@id/kmInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"/>
+
+    <!-- Result View -->
+    <TextView
+        android:id="@+id/ResultView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Results will appear here"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/covertButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
