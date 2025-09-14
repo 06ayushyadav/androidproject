@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">5A_spinner</string>
+
+    <string-array name="city_array">
+        <item>Pune</item>
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Bangalore</item>
+        <item>Hyderabad</item>
+    </string-array>
+</resources>
