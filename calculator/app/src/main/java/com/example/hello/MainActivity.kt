@@ -15,26 +15,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resultText: TextView
 
     private fun calculate(operation: String) {
-        val num1Str = n1.text.toString()
-        val num2Str = n2.text.toString()
 
-        if (num1Str.isEmpty() || num2Str.isEmpty()) {
-            Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_LONG).show()
-            return
-        }
-
-        val num1 = num1Str.toDouble()
-        val num2 = num2Str.toDouble()
+        val num1=n1.text.toString().toDouble()
+        val num2=n2.text.toString().toDouble()
 
         val result = when (operation) {
             "+" -> num1 + num2
             "-" -> num1 - num2
             "*" -> num1 * num2
-            "/" -> if (num2 != 0.0) num1 / num2 else {
-                Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_LONG).show()
-                return
-            }
-            else -> 0.0
+            "/" -> num1 / num2
+        //            if (num2 != 0.0) num1 / num2 else {
+//                Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_LONG).show()
+//                return
+//            }
+            else -> null
         }
 
         resultText.text = "Result: $result"
@@ -54,6 +48,5 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button3).setOnClickListener { calculate("*") }
         findViewById<Button>(R.id.button4).setOnClickListener { calculate("/") }
     }
-
 
 }
